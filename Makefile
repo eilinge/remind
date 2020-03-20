@@ -10,9 +10,11 @@ build_flag := -X main.Build=$(build_time)
 
 docker_registry := registry.cn-shanghai.aliyuncs.com/eilingeloveduzi
 
+# go mod vendor
+
 run: export GOFLAGS=-mod=vendor
 run:
-	go run main.go 
+	go run main.go
 
 test: export GOFLAGS=-mod=vendor
 test:
