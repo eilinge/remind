@@ -1,0 +1,8 @@
+smtp:
+  addr: "smtp.exmail.qq.com"
+  port: 465
+  username: "wuchangqing@sioo.cn"
+  password: "Wcq159753?"
+  from: "Eilinge"
+
+http_listen: ":8080"
