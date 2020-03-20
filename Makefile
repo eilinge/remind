@@ -1,7 +1,7 @@
 
 .PHONE: test, build, clean
 
-app := sioo_alarm
+app := remind
 
 commit := $(shell git rev-parse HEAD)
 commit_flag := -X main.Commit=$(commit)
