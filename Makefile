@@ -20,9 +20,10 @@ test: export GOFLAGS=-mod=vendor
 test:
 	go test -cover -race ./...
 
-build: export CGO_ENABLED=0
+build: export CGO_ENABLED=0 GOOS=linux GOARCH=amd64
 build:
-	go build -mod=vendor -v -ldflags '$(commit_flag) $(build_flag)' -o out/$(app)
+#	go build -mod=vendor -v -ldflags '$(commit_flag) $(build_flag)' -o out/$(app)
+	go build -mod=vendor -v -ldflags '$(commit_flag) $(build_flag)' -o $(app)
 
 deploy_test: export GOOS=linux
 deploy_test: build

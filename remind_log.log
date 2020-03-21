@@ -1,0 +1,58 @@
+Sending build context to Docker daemon   26.1MB
+Step 1/9 : FROM golang as build
+ ---> 374d57ff6662
+Step 2/9 : COPY out/remind /usr/local/go/src/remind/out/remind
+ ---> Using cache
+ ---> f40d39fa4b29
+Step 3/9 : WORKDIR /usr/local/go/src/remind/
+ ---> Using cache
+ ---> c8631b79c951
+Step 4/9 : COPY conf/ conf/
+ ---> Using cache
+ ---> 1ece0fe56250
+Step 5/9 : COPY message/ message/
+ ---> Using cache
+ ---> 0dd729336c77
+Step 6/9 : ADD  out/remind remind
+ ---> Using cache
+ ---> ab88ac803813
+Step 7/9 : COPY remind /usr/bin/remind
+ ---> Using cache
+ ---> 578b0a69117b
+Step 8/9 : RUN chmod +x /usr/bin/remind
+ ---> Using cache
+ ---> 1f4951b51a99
+Step 9/9 : ENTRYPOINT ["remind"]
+ ---> Using cache
+ ---> 572f848c9d86
+Successfully built 572f848c9d86
+Successfully tagged remind:latest
+Sending build context to Docker daemon   26.1MB
+Step 1/9 : FROM golang as build
+ ---> 374d57ff6662
+Step 2/9 : COPY out/remind /usr/local/go/src/remind/out/remind
+ ---> Using cache
+ ---> f40d39fa4b29
+Step 3/9 : WORKDIR /usr/local/go/src/remind/
+ ---> Using cache
+ ---> c8631b79c951
+Step 4/9 : COPY conf/ conf/
+ ---> Using cache
+ ---> 1ece0fe56250
+Step 5/9 : COPY message/ message/
+ ---> Using cache
+ ---> 0dd729336c77
+Step 6/9 : ADD  out/remind remind
+ ---> Using cache
+ ---> ab88ac803813
+Step 7/9 : COPY remind /usr/bin/remind
+ ---> Using cache
+ ---> 578b0a69117b
+Step 8/9 : RUN chmod +x /usr/bin/remind
+ ---> Using cache
+ ---> 1f4951b51a99
+Step 9/9 : ENTRYPOINT ["remind"]
+ ---> Using cache
+ ---> 572f848c9d86
+Successfully built 572f848c9d86
+Successfully tagged remind:latest
